@@ -69,6 +69,7 @@ drop.socket("ws") { req, ws in
 
     ws.onClose = { ws, _, _, _ in
         buzzerManager.sockets.removeValue(forKey: id)
+        try buzzerManager.sendAll(event: .active, text: "\(buzzerManager.users.count)", ignoreId: id)
         print("Socket closed")
     }
 }
