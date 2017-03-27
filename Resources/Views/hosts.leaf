@@ -1,0 +1,24 @@
+#extend("base")
+
+#export("head") {
+    <title>Buffer Buzzer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700,300" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+}
+
+#export("body") {
+    <header>
+        <img class="logo" src="/images/buzzer.png">
+    </header>
+    <div class="container">
+    <h2 class="js-active">#(users.length) joined</h2>
+    <ol class="js-buzzes">
+        #loop(buzzes, "buzz") {
+            <li>#(buzz.name) on Team #(buzz.team)</li>
+        }
+    </ol>
+    <button class="js-clear">Clear buzzes</button>
+
+    <script src="/scripts/hosts.js"></script>
+}

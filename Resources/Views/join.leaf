@@ -1,0 +1,30 @@
+#extend("base")
+
+#export("head") {
+    <title>Buffer Buzzer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700,300" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+}
+
+#export("body") {
+    #raw() {
+        <header>
+            <img class="logo" src="/images/buzzer.png">
+        </header>
+        <div class="container">
+            <form class="js-join">
+                <input type='text' name='name' placeholder='Your name' required='required'>
+                <input type='number' name='team' placeholder='Your team number' required='required'>
+                <button type='submit'>Join!</button>
+            </form>
+            <div class="js-joined hidden">
+                <button class="js-buzzer buzzer">Buzz!!!</button>
+                <p class="js-joined-info"></p>
+                <button class="js-edit secondary">Change teams</button>
+            </div>
+        </div>
+
+        <script src="/scripts/join.js"></script>
+    }
+}

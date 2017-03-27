@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Buzzer by bufferapp-->
+    <!-- https://github.com/bufferapp/buzzer -->
+    #import("head")
+</head>
+<body>
+    #import("body")
+</body>
+</html>
